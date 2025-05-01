@@ -18,7 +18,7 @@ public class MapaRobo {
 
 
         if (direcao.equals("d") || direcao.equals("f") || direcao.equals("t") || direcao.equals("e")) {
-            //5 direita
+
 
             if (direcao.equals("e") || direcao.equals("f") || direcao.equals("t")) {
                 System.out.println("Caminho errado, volte do começo e tente outra direção!");
@@ -27,18 +27,13 @@ public class MapaRobo {
                 System.out.print("Digite o valor do primeiro movimento:");
                 valorp1 = sc.nextInt();
 
-                if (direcao.equals("d") && valorp1 > 5) {
-                    System.out.println("Você andou demais! Jogue novamente.");
-
+                if (direcao.equals("d") && !(valorp1 == 5)) {
+                    System.out.println("Valor errado! Jogue novamente.");
+                    return;
                 }
-            /* VER QUAL USAR
-             if (!(direcao.equals("d") && valorp1 == 5)) {
-            System.out.println("Movimento errado! Jogue novamente.");
-            return;
-             }*/
 
 
-                // 4 trás
+                System.out.println("  " );
                 System.out.println("(D)ireita");
                 System.out.println("(E)squerda");
                 System.out.println("(F)rente");
@@ -53,13 +48,13 @@ public class MapaRobo {
                     System.out.print("Digite o valor do segundo movimento:");
                     valorp2 = sc.nextInt();
 
-                    if (direcao.equals("t") && valorp2 > 4) {
-                        System.out.println("Você andou demais! Jogue novamente.");
-
+                    if (direcao.equals("t") && !(valorp2 == 4)) {
+                        System.out.println("Valor errado! Jogue novamente.");
+                        return;
                     }
 
 
-                    // 5 direita
+                    System.out.println("  " );
                     System.out.println("(D)ireita");
                     System.out.println("(E)squerda");
                     System.out.println("(F)rente");
@@ -73,12 +68,13 @@ public class MapaRobo {
                     } else {
                         System.out.print("Digite o valor do terceiro movimento:");
                         valorp3 = sc.nextInt();
-                        if (direcao.equals("d") && valorp3 > 5) {
-                            System.out.println("Você andou demais! Jogue novamente.");
+                        if (direcao.equals("d") && !(valorp3 == 5)) {
+                            System.out.println("Valor errado! Jogue novamente.");
+                            return;
                         }
 
 
-                        //6 frente
+                        System.out.println("  " );
                         System.out.println("(D)ireita");
                         System.out.println("(E)squerda");
                         System.out.println("(F)rente");
@@ -92,14 +88,15 @@ public class MapaRobo {
                         } else {
                             System.out.print("Digite o valor do quarto movimento:");
                             valorp4 = sc.nextInt();
-                            if (direcao.equals("f") && valorp4 > 6) {
-                                System.out.println("Você andou demais! Jogue novamente.");
+                            if (direcao.equals("f") && !(valorp4 == 6)) {
+                                System.out.println("Valor errado! Jogue novamente.");
+                                return;
 
                             }
 
 
-                            //9 esquerda
 
+                            System.out.println("  " );
                             System.out.println("(D)ireita");
                             System.out.println("(E)squerda");
                             System.out.println("(F)rente");
@@ -113,8 +110,9 @@ public class MapaRobo {
                             } else {
                                 System.out.print("Digite o valor do quinto movimento:");
                                 valorp5 = sc.nextInt();
-                                if (direcao.equals("e") && valorp5 > 9) {
-                                    System.out.println("Você andou demais! Jogue novamente.");
+                                if (direcao.equals("e") && !(valorp5 == 9)) {
+                                    System.out.println("Valor errado! Jogue novamente.");
+                                    return;
 
                                 }
                             }
@@ -124,8 +122,10 @@ public class MapaRobo {
 
                 }
             }
+            System.out.println("  " );
+            System.out.println("Parabéns, você chegou no final do caminho!");
         }
-        System.out.println("Parabéns, você chegou no final do caminho!");
+
     }
 }
 
